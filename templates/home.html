@@ -4,71 +4,67 @@
     <meta charset="UTF-8">
     <title>Boston House Price Prediction</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <style>
-       body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%; /* Adjusted width for responsiveness */
-    margin: auto; /* Center the container */
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-input[type="text"],
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        width: 70%; /* Adjusted width for larger screens */
-    }
-}
-
-    </style>
+    <link href="/static/styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Boston House Price Prediction</h1>
         <form action="{{ url_for('predict') }}" method="post">
-            <input type="text" name="CRIM" placeholder="CRIM" required>
-            <input type="text" name="ZN" placeholder="ZN" required>
-            <input type="text" name="INDUS" placeholder="INDUS" required>
-            <input type="text" name="CHAS" placeholder="CHAS" required>
-            <input type="text" name="NOX" placeholder="NOX" required>
-            <input type="text" name="RM" placeholder="RM" required>
-            <input type="text" name="Age" placeholder="Age" required>
-            <input type="text" name="DIS" placeholder="DIS" required>
-            <input type="text" name="RAD" placeholder="RAD" required>
-            <input type="text" name="TAX" placeholder="TAX" required>
-            <input type="text" name="PTRATIO" placeholder="PTRATIO" required>
-            <input type="text" name="B" placeholder="B" required>
-            <input type="text" name="LSTAT" placeholder="LSTAT" required>
+            <div class="input-container">
+                <label for="CRIM">CRIM (Crime Rate):</label>
+                <input type="text" name="CRIM" placeholder="Enter CRIM" required>
+            </div>
+            <div class="input-container">
+                <label for="ZN">ZN (Residential Land Proportion):</label>
+                <input type="text" name="ZN" placeholder="Enter ZN" required>
+            </div>
+            <div class="input-container">
+                <label for="INDUS">INDUS (Non-Retail Business Proportion):</label>
+                <input type="text" name="INDUS" placeholder="Enter INDUS" required>
+            </div>
+            <div class="input-container">
+                <label for="CHAS">CHAS (Charles River Dummy):</label>
+                <input type="text" name="CHAS" placeholder="Enter CHAS" required>
+            </div>
+            <div class="input-container">
+                <label for="NOX">NOX (Nitric Oxide Concentration):</label>
+                <input type="text" name="NOX" placeholder="Enter NOX" required>
+            </div>
+            <div class="input-container">
+                <label for="RM">RM (Average Number of Rooms):</label>
+                <input type="text" name="RM" placeholder="Enter RM" required>
+            </div>
+            <div class="input-container">
+                <label for="Age">AGE (Owner-Occupied Units Proportion):</label>
+                <input type="text" name="Age" placeholder="Enter Age" required>
+            </div>
+            <div class="input-container">
+                <label for="DIS">DIS (Weighted Distances to Employment Centers):</label>
+                <input type="text" name="DIS" placeholder="Enter DIS" required>
+            </div>
+            <div class="input-container">
+                <label for="RAD">RAD (Accessibility to Radial Highways):</label>
+                <input type="text" name="RAD" placeholder="Enter RAD" required>
+            </div>
+            <div class="input-container">
+                <label for="TAX">TAX (Property Tax Rate):</label>
+                <input type="text" name="TAX" placeholder="Enter TAX" required>
+            </div>
+            <div class="input-container">
+                <label for="PTRATIO">PTRATIO (Pupil-Teacher Ratio):</label>
+                <input type="text" name="PTRATIO" placeholder="Enter PTRATIO" required>
+            </div>
+            <div class="input-container">
+                <label for="B">B (Proportion of Black People):</label>
+                <input type="text" name="B" placeholder="Enter B" required>
+            </div>
+            <div class="input-container">
+                <label for="LSTAT">LSTAT (Lower Status Population Percentage):</label>
+                <input type="text" name="LSTAT" placeholder="Enter LSTAT" required>
+            </div>
             <button type="submit">Predict</button>
         </form>
+        <!-- Prediction text will be displayed here -->
         <div class="prediction-text">{{ prediction_text }}</div>
     </div>
 </body>

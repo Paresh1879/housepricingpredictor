@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/3cc76580-1c74-4ee8-afd4-359cd30d2620/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/bostonhousepricingpredictor",
+    "appService.deploySubpath": "."
+}
