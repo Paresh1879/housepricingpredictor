@@ -49,41 +49,12 @@ The trained model will be saved in the `models/` directory.
 2. Run the Docker container:
 
    ```bash
-   docker run -p 5000:5000 boston-house-predictor
+   docker run -p 8080:8080 boston-house-predictor
    ```
 
-The Flask app will be accessible at `http://localhost:5000`.
+The Flask app will be accessible at `http://localhost:8080`.
 
-## Deploying to Heroku
-
-1. Sign up for Heroku and install the Heroku CLI.
-2. Log in to Heroku:
-
-   ```bash
-   heroku login
-   ```
-
-3. Create a Heroku app:
-
-   ```bash
-   heroku create <app_name>
-   ```
-
-4. Deploy the application to Heroku:
-
-   ```bash
-   git push heroku master
-   ```
-
-## Usage
-
-After deployment, the prediction API will be available at the Heroku app URL. Send a POST request with input features to `/predict` endpoint to get predictions.
-
-Example using cURL:
-
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"CRIM": 0.00632, "ZN": 18.0, "INDUS": 2.31, "CHAS": 0.0, "NOX": 0.538, "RM": 6.575, "AGE": 65.2, "DIS": 4.0900, "RAD": 1.0, "TAX": 296.0, "PTRATIO": 15.3, "B": 396.90, "LSTAT": 4.98}' https://<app_name>.herokuapp.com/predict
-```
+## Deploy to Azure Apps Service - https://bostonhousepricingprediction.azurewebsites.net/
 
 ## Contributors
 
