@@ -54,7 +54,8 @@ The trained model will be saved in the `models/` directory.
 
 The Flask app will be accessible at `http://localhost:8080`.
 
-## Deploy to Azure Apps Service - https://bostonhousepricingprediction.azurewebsites.net/
+## Deploy to Azure Apps Service - 
+### https://bostonhousepricingprediction.azurewebsites.net/
 
 ## Contributors
 
